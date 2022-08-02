@@ -60,7 +60,7 @@ void Setup()
     fruit3Y = rand() % height;
     score = 0;
     //Plays background music.
-    PlaySound(TEXT("C://Users//jradh//OneDrive//Desktop//Game Sound Files//BackgroundLoop.wav"), NULL, SND_NOSTOP | SND_LOOP | SND_ASYNC);
+    PlaySound(TEXT("GameSounds\BackgroundLoop.wav"), NULL, SND_NOSTOP | SND_LOOP | SND_ASYNC);
     
 }
 
@@ -796,9 +796,9 @@ void Logic()
     if (score == 200 || score == 300 || score == 400 || score == 500)
     {
         //level transition sound pauses game process while playing to allow users to prepare for next level
-        PlaySound(TEXT("C://Users//jradh//OneDrive//Desktop//Game Sound Files//NextLevel.wav"), NULL, SND_NODEFAULT | SND_FILENAME);
+        PlaySound(TEXT("GameSounds\NextLevel.wav"), NULL, SND_NODEFAULT | SND_FILENAME);
         //Plays background music.
-        PlaySound(TEXT("C://Users//jradh//OneDrive//Desktop//Game Sound Files//BackgroundLoop.wav"), NULL, SND_NOSTOP | SND_LOOP | SND_ASYNC);
+        PlaySound(TEXT("GameSounds\BackgroundLoop.wav"), NULL, SND_NOSTOP | SND_LOOP | SND_ASYNC);
 
         width = width - 5;
         height = height - 5;
@@ -818,9 +818,9 @@ void Logic()
         fruitY = rand() % height;
         nTail++;
        //plays sound when fruit is eaten
-       PlaySound(TEXT("C://Users//jradh//OneDrive//Desktop//Game Sound Files//EatFruit.wav"), NULL, SND_NODEFAULT | SND_FILENAME);
+       PlaySound(TEXT("GameSounds\EatFruit.wav"), NULL, SND_NODEFAULT | SND_FILENAME);
        //Plays background music.
-       PlaySound(TEXT("C://Users//jradh//OneDrive//Desktop//Game Sound Files//BackgroundLoop.wav"), NULL, SND_NOSTOP | SND_LOOP | SND_ASYNC);
+       PlaySound(TEXT("GameSounds\BackgroundLoop.wav"), NULL, SND_NOSTOP | SND_LOOP | SND_ASYNC);
     }
     else if (x == fruit2X && y == fruit2Y)
     {
@@ -834,9 +834,9 @@ void Logic()
         // adds a tail segment
         nTail++;
         //plays sound when fruit is eaten
-        PlaySound(TEXT("C://Users//jradh//OneDrive//Desktop//Game Sound Files//EatFruit.wav"), NULL,  SND_NODEFAULT | SND_FILENAME);
+        PlaySound(TEXT("GameSounds\EatFruit.wav"), NULL,  SND_NODEFAULT | SND_FILENAME);
         //Plays background music.
-        PlaySound(TEXT("C://Users//jradh//OneDrive//Desktop//Game Sound Files//BackgroundLoop.wav"), NULL, SND_NOSTOP | SND_LOOP | SND_ASYNC);
+        PlaySound(TEXT("GameSounds\BackgroundLoop.wav"), NULL, SND_NOSTOP | SND_LOOP | SND_ASYNC);
     }
     else if (x == fruit3X && y == fruit3Y)
     {
@@ -847,9 +847,9 @@ void Logic()
         fruit3Y = rand() % height;
         nTail++;
         //plays sound when fruit is eaten
-        PlaySound(TEXT("C://Users//jradh//OneDrive//Desktop//Game Sound Files//EatFruit.wav"), NULL, SND_NODEFAULT | SND_FILENAME);
+        PlaySound(TEXT("GameSounds\EatFruit.wav"), NULL, SND_NODEFAULT | SND_FILENAME);
         //restarts music loop after sound
-        PlaySound(TEXT("C://Users//jradh//OneDrive//Desktop//Game Sound Files//BackgroundLoop.wav"), NULL, SND_NOSTOP | SND_LOOP | SND_ASYNC);
+        PlaySound(TEXT("GameSounds\BackgroundLoop.wav"), NULL, SND_NOSTOP | SND_LOOP | SND_ASYNC);
 
         
 
@@ -868,7 +868,7 @@ void Logic()
         {   
             cout << dye::red("Game Over! :-(");
 
-            PlaySound(TEXT("C://Users//jradh//OneDrive//Desktop//Game Sound Files//GameOver.wav"), NULL, SND_NODEFAULT | SND_FILENAME);
+            PlaySound(TEXT("GameSounds\GameOver.wav"), NULL, SND_NODEFAULT | SND_FILENAME);
             //ensures the gameover sound has time to play before termination of the program.
             Sleep(2000);
             if (score > 600)
@@ -876,7 +876,7 @@ void Logic()
                 cout << "Congratulations!! You have completed Snake Trap! Play again and beat your highscore!" << endl;
                 cout << "Created by Jared Hall" << endl;
 
-                PlaySound(TEXT("C://Users//jradh//OneDrive//Desktop//Game Sound Files//EndGame.wav"), NULL, SND_NODEFAULT | SND_FILENAME);
+                PlaySound(TEXT("GameSounds\EndGame.wav"), NULL, SND_NODEFAULT | SND_FILENAME);
                
             }
             gameOver = true;
